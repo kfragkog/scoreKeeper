@@ -53,4 +53,7 @@ p {
 
 .username{
     width: 150px;
+    height: 30px;
+    font-size: 13px;
+    margin-left: 10px;
 }

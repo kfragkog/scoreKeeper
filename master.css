@@ -22,8 +22,9 @@ button {
     height: 30px;
     padding: 5px;
     margin: 0 10px;
-    color: #ffff;
     border-radius: 4px;
+    color: #ffff;
+    font-size: 13px;
     background-color: rgb(86, 192, 228);
     cursor: pointer;
 }
