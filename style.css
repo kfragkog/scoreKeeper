@@ -1,0 +1,56 @@
+body {
+    width: 40%;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreNums {
+    font-size: 50px;
+    margin: 10px 10px;
+}
+
+#constraint {
+    width: 30px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+#score ~ div {
+    text-align: center;
+    margin: 50px auto;
+}
+
+p {
+    padding-top: 5px;
+}
+
+.winner {
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+#users {
+    text-align: center;
+}
+
+#users div {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.username{
+    width: 150px;
+}
