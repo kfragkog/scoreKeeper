@@ -7,6 +7,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 #score {
     display: flex;
     justify-content: center;
@@ -92,4 +96,14 @@ ul {
     position: absolute;
     right: 3px;
     top: 4px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    margin-right: 135px;
+}
+
+li div {
+    margin-right: 10px;
 }

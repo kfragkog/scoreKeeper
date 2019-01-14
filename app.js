@@ -7,6 +7,8 @@ let constraint = document.getElementById("constraint");
 let scoreOneValue = 0;
 let scoreTwoValue = 0;
 let constraintValue = 5;
+let arrGame = [];
+let arrHistory = [];
 
 
 //events
@@ -30,6 +32,7 @@ document.getElementById("buttonGameH").addEventListener("click", function () {
     document.getElementById("popup").classList.remove("hidden");
     document.getElementById("main").style.opacity = "0.05";
     document.querySelector("h1").style.opacity = "0.05";
+    populateGameHistory();
 })
 document.querySelector(".deleteImg").addEventListener("click", function () {
     document.getElementById("popup").classList.add("hidden");
@@ -52,17 +55,29 @@ function scoreUpdate(score, scoreValue) {
         }
         
         if (scoreOneValue == constraintValue || scoreTwoValue == constraintValue) {
+            arrGame = [];
+            arrGame.push(scoreOneValue);
+            arrGame.push(scoreTwoValue);
+
             if (scoreOneValue > scoreTwoValue) {
                 scoreOne.classList.add("winner");
                 setTimeout(function() {
                     window.alert("Game Over\nWell done " + userOne + "!");
                 }, 500);
+                arrGame.push(userOne);
+
             }
             else {
                 scoreTwo.classList.add("winner");
                 setTimeout(function() {
                     window.alert("Game Over\nWell done " + userTwo + "!");
                 }, 500);
+                arrGame.push(userTwo);
+            }
+            
+            arrHistory.push(arrGame);
+            if (arrHistory.length > 5) {
+                arrHistory.shift();
             }
         }
     }
@@ -84,6 +99,30 @@ function resetConstr() {
         reset(); 
     }
 
+}
+
+function populateGameHistory() {
+    document.getElementById("list").innerHTML = "";
+    console.log(arrHistory)
+    for (let i = 0; i < arrHistory.length; i++) {
+        let ul = document.getElementById("list");
+        let li = document.createElement("li");
+        let divOne = document.createElement("div");
+        let divThree = document.createElement("div");
+        let divTwo = document.createElement("div");
+        let divFour = document.createElement("div");
+
+        divOne.innerText = arrHistory[i][0];
+        divThree.innerText = "-"
+        divTwo.innerText = arrHistory[i][1];
+        divFour.innerText = arrHistory[i][2]
+
+        ul.appendChild(li);
+        li.appendChild(divOne);
+        li.appendChild(divTwo);
+        li.appendChild(divThree);
+        li.appendChild(divFour);
+    }
 }
 
 
