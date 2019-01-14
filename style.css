@@ -57,3 +57,39 @@ p {
     font-size: 13px;
     margin-left: 10px;
 }
+
+#buttonGameH {
+    width: 150px;
+    background-color: rgba(197, 188, 188, 0.678);
+    border-color: rgba(197, 188, 188, 0.678);
+}
+
+#buttonGameH:hover {
+    background-color: rgba(224, 210, 210, 0.678);
+}
+
+#popup {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    top: -450px;
+    overflow: auto;
+}
+
+img:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.deleteImg {
+    width: 15px;
+    height: 14px;
+    padding-right: 2px;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+}

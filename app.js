@@ -26,6 +26,16 @@ constraint.addEventListener("keyup", function(e) {
         resetConstr(e)
     }
 });
+document.getElementById("buttonGameH").addEventListener("click", function () {
+    document.getElementById("popup").classList.remove("hidden");
+    document.getElementById("main").style.opacity = "0.05";
+    document.querySelector("h1").style.opacity = "0.05";
+})
+document.querySelector(".deleteImg").addEventListener("click", function () {
+    document.getElementById("popup").classList.add("hidden");
+    document.getElementById("main").style.opacity = "1";
+    document.querySelector("h1").style.opacity = "1";
+})
 
 
 //functions
