@@ -1,69 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Score Keeper</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="master.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="icon" href="op.png">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="op.png" />
+  </head>
+  <body>
     <h1>Score Keeper</h1>
 
     <div id="users">
-        <div>
-            <label for="user1">Pick your username Player One </label>
-            <input type="text" id="user1" placeholder=" Enter your name.." class="border username">
-        </div> 
-        
-        <div>
-            <label for="user2">Pick your username Player Two </label>
-            <input type="text" id="user2" placeholder=" Enter your name.." class="border username">
-        </div> 
-            
-        <button id="submitUsers">Let's go!</button>
-        
-        <div id="copyright">
-                &copy Brought to you by <img src="op.png" id="copyrightImg" alt="">
-        </div>
+      <div>
+        <label for="user1">Pick your username Player One </label>
+        <input
+          type="text"
+          id="user1"
+          placeholder=" Enter your name.."
+          class="border username"
+        />
+      </div>
+
+      <div>
+        <label for="user2">Pick your username Player Two </label>
+        <input
+          type="text"
+          id="user2"
+          placeholder=" Enter your name.."
+          class="border username"
+        />
+      </div>
+
+      <button id="submitUsers">Let's go!</button>
+
+      <div id="copyright">
+        &copy Brought to you by <img src="op.png" id="copyrightImg" alt="" />
+      </div>
     </div>
 
     <div id="main" class="hidden">
-        <div id="score" class="border">
-            <div id="scorePlOne" class="scoreNums">0</div>
-            <p>to</p>
-            <div id="scorePlTwo" class="scoreNums">0</div>
-        </div>
-            
-        <div>
-            <label for="constraint">Playing to </label>
-            <input type="text" id="constraint" placeholder="5" class="border">
-        </div>  
-        
-        <div>
-            <button id="buttonPlOne">Player One</button>
-            <button id="buttonPlTwo">Player Two</button>
-            <button id="reset">Reset</button>
-        </div>
+      <div id="score" class="border">
+        <div id="scorePlOne" class="scoreNums">0</div>
+        <p>to</p>
+        <div id="scorePlTwo" class="scoreNums">0</div>
+      </div>
 
-        <div>
-            <button id="buttonGameH">Game history</button>
-        </div>
+      <div>
+        <label for="constraint">Playing to </label>
+        <input type="text" id="constraint" placeholder="5" class="border" />
+      </div>
 
-        <div id="copyright">
-                &copy Brought to you by <img src="op.png" id="copyrightImg" alt="">
-        </div>
+      <div>
+        <button id="buttonPlOne">Player One</button>
+        <button id="buttonPlTwo">Player Two</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <div><button id="buttonGameH">Game history</button></div>
+
+      <div id="copyright">
+        &copy Brought to you by <img src="op.png" id="copyrightImg" alt="" />
+      </div>
     </div>
 
     <div id="popup" class="border hidden">
-        <h2>Game History</h2>
-        <img class="deleteImg" src="https://maxcdn.icons8.com/Share/icon/Very_Basic/delete_sign1600.png" alt="">
-        <ul id="list"></ul>
+      <h2>Game History</h2>
+      <img
+        class="deleteImg"
+        src="https://maxcdn.icons8.com/Share/icon/Very_Basic/delete_sign1600.png"
+        alt=""
+      />
+      <ul id="list"></ul>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
